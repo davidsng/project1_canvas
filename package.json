@@ -9,11 +9,12 @@
     "test": "standard",
     "clean": "rm -rf dist",
     "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
-    "build-html": "cp game/index.html dist/index.html",
-    "build-css": "cp game/game.css dist/game.css",
-    "build-js": "browserify game/game.js --outfile dist/game.js --transform babelify",
-    "watch": "npm run build && npm run watch-js & npm run start-server",
-    "watch-js": "watchify game/game.js --outfile dist/game.js --transform babelify --verbose"
+    "build-html": "cp index.html dist/index.html",
+    "build-css": "cp game.css dist/game.css",
+    "build-js": "browserify game.js --outfile dist/game.js --transform babelify",
+    "watch": "npm run build && npm run watch-js & npm run watch-css & npm run start-server",
+    "watch-js": "watchify game.js --outfile dist/game.js --transform babelify --verbose",
+    "watch-css": "watchify game.css --outfile dist/game.css --transform babelify --verbose"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,8 @@
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-stage-0": "^6.1.18",
     "babelify": "^7.2.0",
-    "browserify": "^12.0.1"
+    "browserify": "^12.0.1",
+    "http-server": "^0.8.5",
+    "standard": "^5.3.1"
   }
 }
