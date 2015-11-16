@@ -1,7 +1,7 @@
 {
-  "name": "Canvas game",
+  "name": "Canvasgame",
   "version": "1.0.0",
-  "description": "Canvas game",
+  "description": "Canvasgame",
   "main": "game.js",
   "scripts": {
     "start": "npm run build && npm run start-server",
