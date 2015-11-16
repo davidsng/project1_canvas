@@ -84,7 +84,7 @@ function collisionDetection() {
           b.status = 0;
           score += 1;
           if (score === brickRowCount * brickColumnCount) {
-            // alert('Congratulations, you have won!')
+            alert('Congratulations, you won!');
             document.location.reload();
           }
         }
@@ -124,7 +124,7 @@ function draw() {
       // setInterval(draw, ballSpeed)
       dy = -dy;
     } else {
-      // alert('Game Over')
+      alert('Game Over');
       document.location.reload();
     }
   }
