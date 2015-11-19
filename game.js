@@ -81,6 +81,7 @@ function collisionDetection () {
           b.status = 0
           score += 1
           if (score === brickRowCount * brickColumnCount) {
+            clearInterval(drawInterval)
             alert('Congratulations, you won!')
             document.location.reload()
           }
@@ -119,6 +120,7 @@ function draw () {
       // setInterval(draw, ballSpeed)
       dy = -dy
     } else {
+      clearInterval(drawInterval)
       alert('Game Over')
       document.location.reload()
     }
@@ -161,4 +163,4 @@ function mouseMoveHandler (e) {
 }
 
 // var timerRef = setInterval(draw, ballSpeed)
-setInterval(draw, ballSpeed)
+var drawInterval = setInterval(draw, ballSpeed)
